@@ -28,18 +28,12 @@ public class Test : MonoBehaviour
         //Bossクラスの変数を宣言してインスタンスを代入する
         Boss boss = new Boss();
 
-        //Magic関数を11回使用する
-        boss.Magic();
-        boss.Magic();
-        boss.Magic();
-        boss.Magic();
-        boss.Magic();
-        boss.Magic();
-        boss.Magic();
-        boss.Magic();
-        boss.Magic();
-        boss.Magic();
-        boss.Magic();
+        //Magic関数を11回使う
+        for (int i = 0; i < 11; i++)
+        {
+            boss.Magic();
+        }
+
     }
 
     //Update is called once per frame
@@ -60,7 +54,7 @@ public class Boss
         {
             //mpを5以上の場合は、5減らし、"魔法攻撃をした。残りMPは○○。"と表示する
             mp -= 5;
-            Debug.Log("魔法攻撃をした。残りMPは○○。");
+            Debug.Log("魔法攻撃をした。残りMPは" + this.mp + "。");
         }
         else
         {
